@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  /* Primary Colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  /* Typography */
+  --font-family: "Red Hat Display", sans-serif;
+  --font-size: 16px;
+  /* images background */
+  --desktop-image: url('../images/pattern-background-desktop.svg');
+  --mobile-image: url('../images/pattern-background-mobile.svg');
+}
+
+*,*::after,*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--pale-blue);
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+main {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  max-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-body {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card-body h3 {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  color: var(--desaturated-blue);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.card-plan {
+  width: 95%;
+  background-color: var(--very-pale-blue);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-plan p {
+  margin: 0;
+  padding: 0;
+}
+
+.card-plan p:nth-child(1) {
+  color: var(--dark-blue);
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+}
+
+.link-item {
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 30px;
+}
+
+.btn {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  display: block;
+  width: 90%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  color: var(--desaturated-blue);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.attribution p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0; 
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+  
+  body {
+    background-image: var(--desktop-image);
+  }
+  
+  .attribution {
+    background-color: #fff;
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {  
+  body {
+    background-image: var(--mobile-image);
+  }
+
+}
